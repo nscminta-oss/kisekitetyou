@@ -1,0 +1,25 @@
+# Render Blueprint（任意）
+# Dashboard → New → Blueprint でこのリポジトリを指定すると設定が自動で入る。
+# 手動で Web Service を作る場合は不要。
+services:
+  - type: web
+    name: scheduler-backend
+    runtime: python
+    plan: free
+    rootDir: backend
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn main:app --host 0.0.0.0 --port $PORT
+    healthCheckPath: /health
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.12.7
+      # 下記2つは値を含めない。Render のダッシュボードで手入力する。
+      - key: SUPABASE_URL
+        sync: false
+      - key: SUPABASE_ANON_KEY
+        sync: false
+      - key: ALLOWED_ORIGINS
+        sync: false
+      # 未設定でも起動はする（称号生成がデフォルト文言にフォールバックするだけ）。
+      - key: GEMINI_API_KEY
+        sync: false
