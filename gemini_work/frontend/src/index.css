@@ -7,57 +7,104 @@
   --font-mono: 'DM Mono', monospace;
 }
 
-/* ── Dark (default) ────────────────────────────────────── */
+/* ─────────────────────────────────────────────────────────
+   きせきの手帳 カラーパレット
+
+   割合：白20% / 青30% / 緑30% / ベージュ20%
+   白   → #F7F9F7（Mist White）
+   青   → #287B9E（Water Blue）/ #79C8D6（Clear Water）
+   緑   → #4F8064（Forest Green）
+   ベージュ → #E8DDC8（Sand Beige）
+──────────────────────────────────────────────────────────── */
+
+/* ── ライトモード（デフォルト）── */
 :root {
-  --bg:            #09090f;
-  --surface:       #111119;
-  --surface-raised:#191926;
-  --surface-hover: #21212f;
-  --border:        rgba(120,120,220,0.1);
-  --border-mid:    rgba(120,120,220,0.18);
-  --border-hi:     rgba(120,120,220,0.32);
-  --text:          #e8e8f6;
-  --text-muted:    rgba(232,232,246,0.52);
-  --text-dim:      rgba(232,232,246,0.3);
-  --accent:        #5b8ef7;
-  --accent-dim:    rgba(91,142,247,0.14);
-  --accent-mid:    rgba(91,142,247,0.28);
-  --ai:            #f7b84f;
-  --ai-dim:        rgba(247,184,79,0.15);
-  --ai-mid:        rgba(247,184,79,0.3);
-  --shadow:        0 24px 64px rgba(0,0,0,0.65);
-  --shadow-sm:     0 4px 20px rgba(0,0,0,0.45);
-  --col-selected:  rgba(91,142,247,0.08);
-  /* font scale — md */
+  /* ベース（白：20%） */
+  --bg:             #F7F9F7;
+  --surface:        #ffffff;
+  --surface-raised: #F0F5F0;
+  --surface-hover:  #E8EFE8;
+
+  /* ボーダー（緑ベース） */
+  --border:         rgba(79, 128, 100, 0.15);
+  --border-mid:     rgba(79, 128, 100, 0.28);
+  --border-hi:      rgba(40, 123, 158, 0.45);
+
+  /* テキスト */
+  --text:           #1a2e24;
+  --text-muted:     rgba(26, 46, 36, 0.58);
+  --text-dim:       rgba(26, 46, 36, 0.35);
+
+  /* アクセント（青：30%） */
+  --accent:         #287B9E;
+  --accent-light:   #79C8D6;
+  --accent-dim:     rgba(40, 123, 158, 0.12);
+  --accent-mid:     rgba(40, 123, 158, 0.28);
+
+  /* サブアクセント（緑：30%） */
+  --green:          #4F8064;
+  --green-dim:      rgba(79, 128, 100, 0.14);
+  --green-mid:      rgba(79, 128, 100, 0.28);
+
+  /* ベージュ（20%） */
+  --beige:          #E8DDC8;
+  --beige-dim:      rgba(232, 221, 200, 0.5);
+  --beige-dark:     #d4c4a8;
+
+  /* AI関連（ゴールド） */
+  --ai:             #287B9E;
+  --ai-dim:         rgba(40, 123, 158, 0.15);
+  --ai-mid:         rgba(40, 123, 158, 0.3);
+
+  /* シャドウ */
+  --shadow:         0 24px 64px rgba(40, 123, 158, 0.14);
+  --shadow-sm:      0 4px 20px rgba(40, 123, 158, 0.10);
+  --col-selected:   rgba(40, 123, 158, 0.09);
+
+  /* フォントスケール */
   --fs-2xs: 0.52rem; --fs-xs: 0.65rem; --fs-sm: 0.78rem;
   --fs-base: 0.9rem; --fs-md: 1rem;   --fs-lg: 1.35rem;
   --fs-xl: 1.75rem;  --fs-2xl: 2.25rem;
 }
 
-/* ── Light ─────────────────────────────────────────────── */
-[data-theme="light"] {
-  --bg:            #f0f0fa;
-  --surface:       #ffffff;
-  --surface-raised:#e8e8f4;
-  --surface-hover: #dcdcec;
-  --border:        rgba(50,50,130,0.1);
-  --border-mid:    rgba(50,50,130,0.18);
-  --border-hi:     rgba(50,50,130,0.32);
-  --text:          #09091e;
-  --text-muted:    rgba(9,9,30,0.52);
-  --text-dim:      rgba(9,9,30,0.32);
-  --accent:        #2563eb;
-  --accent-dim:    rgba(37,99,235,0.1);
-  --accent-mid:    rgba(37,99,235,0.26);
-  --ai:            #d97706;
-  --ai-dim:        rgba(217,119,6,0.12);
-  --ai-mid:        rgba(217,119,6,0.28);
-  --shadow:        0 24px 64px rgba(0,0,0,0.12);
-  --shadow-sm:     0 4px 20px rgba(0,0,0,0.08);
-  --col-selected:  rgba(37,99,235,0.07);
+/* ── ダークモード（黒白モード）── */
+[data-theme="dark"] {
+  --bg:             #0c0c0c;
+  --surface:        #161616;
+  --surface-raised: #1e1e1e;
+  --surface-hover:  #262626;
+
+  --border:         rgba(255,255,255,0.10);
+  --border-mid:     rgba(255,255,255,0.18);
+  --border-hi:      rgba(255,255,255,0.32);
+
+  --text:           #f0f0f0;
+  --text-muted:     rgba(240,240,240,0.52);
+  --text-dim:       rgba(240,240,240,0.3);
+
+  --accent:         #79C8D6;
+  --accent-light:   #a8dfe8;
+  --accent-dim:     rgba(121, 200, 214, 0.14);
+  --accent-mid:     rgba(121, 200, 214, 0.28);
+
+  --green:          #6aaa88;
+  --green-dim:      rgba(106, 170, 136, 0.14);
+  --green-mid:      rgba(106, 170, 136, 0.28);
+
+  --beige:          #3a3228;
+  --beige-dim:      rgba(58, 50, 40, 0.5);
+  --beige-dark:     #4a4035;
+
+  --ai:             #79C8D6;
+  --ai-dim:         rgba(121, 200, 214, 0.15);
+  --ai-mid:         rgba(121, 200, 214, 0.3);
+
+  --shadow:         0 24px 64px rgba(0,0,0,0.65);
+  --shadow-sm:      0 4px 20px rgba(0,0,0,0.45);
+  --col-selected:   rgba(121, 200, 214, 0.08);
 }
 
-/* ── Font sizes ─────────────────────────────────────────── */
+/* ── フォントサイズ ── */
 [data-fontsize="sm"] {
   --fs-2xs:0.46rem;--fs-xs:0.58rem;--fs-sm:0.7rem;
   --fs-base:0.82rem;--fs-md:0.9rem;--fs-lg:1.2rem;
@@ -69,70 +116,89 @@
   --fs-xl:2rem;--fs-2xl:2.6rem;
 }
 
-/* ── Base ───────────────────────────────────────────────── */
+/* ── ベース ── */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 html { font-size: 16px; }
 body {
-  background: var(--bg); color: var(--text);
-  font-family: var(--font-body); font-size: var(--fs-base);
-  -webkit-font-smoothing: antialiased; min-height: 100vh;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-body);
+  font-size: var(--fs-base);
+  -webkit-font-smoothing: antialiased;
+  min-height: 100vh;
 }
+
+/* スクロールバー */
 ::-webkit-scrollbar { width: 4px; height: 4px; }
 ::-webkit-scrollbar-track { background: transparent; }
 ::-webkit-scrollbar-thumb { background: var(--border-mid); border-radius: 2px; }
 ::-webkit-scrollbar-thumb:hover { background: var(--border-hi); }
 ::selection { background: var(--accent-dim); color: var(--text); }
 
-/* Global smooth color transitions */
+/* トランジション */
 *, *::before, *::after {
   transition-property: background-color, border-color, color, opacity;
-  transition-duration: 0.18s; transition-timing-function: ease;
+  transition-duration: 0.18s;
+  transition-timing-function: ease;
 }
-button, a { transition-property: background-color, border-color, color, opacity, box-shadow, transform; }
+button, a {
+  transition-property: background-color, border-color, color, opacity, box-shadow, transform;
+}
 
-/* ── Layout ─────────────────────────────────────────────── */
+/* ── レイアウト ── */
 .app-shell {
-  display: flex; height: 100dvh; overflow: hidden;
+  display: flex;
+  height: 100dvh;
+  overflow: hidden;
 }
 .main-content {
-  flex: 1; overflow-y: auto; overflow-x: hidden;
-  padding-bottom: 72px; /* bottom nav on mobile */
+  flex: 1;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding-bottom: 72px;
 }
 @media (min-width: 768px) {
   .main-content { padding-bottom: 0; padding-left: 68px; }
 }
 
-/* ── Sidebar (desktop) ──────────────────────────────────── */
+/* ── サイドバー（デスクトップ）── */
 .sidebar {
   display: none;
   position: fixed; top: 0; left: 0; bottom: 0;
   width: 68px; z-index: 40;
-  background: var(--surface); border-right: 1px solid var(--border);
-  flex-direction: column; align-items: center;
+  background: var(--surface);
+  border-right: 1px solid var(--border);
+  flex-direction: column;
+  align-items: center;
   padding: 16px 0;
 }
 @media (min-width: 768px) { .sidebar { display: flex; } }
 
-/* ── Bottom nav (mobile) ────────────────────────────────── */
+/* ── ボトムナビ（モバイル）── */
 .bottom-nav {
   position: fixed; bottom: 0; left: 0; right: 0; height: 68px;
-  background: var(--surface); border-top: 1px solid var(--border);
-  display: flex; z-index: 40;
+  background: var(--surface);
+  border-top: 1px solid var(--border);
+  display: flex;
+  z-index: 40;
 }
 @media (min-width: 768px) { .bottom-nav { display: none; } }
 
-/* ── Settings panel ─────────────────────────────────────── */
+/* ── 設定パネル ── */
 .settings-panel {
   position: fixed; top: 0; right: 0; bottom: 0; width: min(340px, 100vw);
-  background: var(--surface); border-left: 1px solid var(--border-mid);
-  box-shadow: var(--shadow); z-index: 60;
-  display: flex; flex-direction: column;
+  background: var(--surface);
+  border-left: 1px solid var(--border-mid);
+  box-shadow: var(--shadow);
+  z-index: 60;
+  display: flex;
+  flex-direction: column;
   transform: translateX(100%);
   transition: transform 0.28s cubic-bezier(0.4,0,0.2,1) !important;
 }
 .settings-panel.open { transform: translateX(0); }
 
-/* ── Cards ──────────────────────────────────────────────── */
+/* ── カード ── */
 .card {
   background: var(--surface-raised);
   border: 1px solid var(--border);
@@ -141,12 +207,109 @@ button, a { transition-property: background-color, border-color, color, opacity,
 }
 .card-sm { border-radius: 12px; padding: 14px 16px; }
 
-/* ── AI glow ────────────────────────────────────────────── */
+/* ── きせき 専用カード（ベージュ）── */
+.card-kiseki {
+  background: var(--beige);
+  border: 1px solid var(--beige-dark);
+  border-radius: 16px;
+  padding: 20px;
+}
+
+/* ── ログイン画面 特別スタイル ── */
+.login-screen {
+  min-height: 100dvh;
+  background: linear-gradient(
+    160deg,
+    var(--bg) 0%,
+    color-mix(in srgb, var(--beige) 30%, var(--bg)) 40%,
+    color-mix(in srgb, var(--accent-dim) 60%, var(--bg)) 100%
+  );
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ── メインボタン（青）── */
+.btn-primary {
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  padding: 12px 24px;
+  font-size: var(--fs-base);
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity 0.15s, transform 0.1s;
+}
+.btn-primary:hover { opacity: 0.88; transform: translateY(-1px); }
+.btn-primary:active { transform: translateY(0); }
+
+/* ── サブボタン（緑）── */
+.btn-secondary {
+  background: var(--green);
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  padding: 12px 24px;
+  font-size: var(--fs-base);
+  font-weight: 500;
+  cursor: pointer;
+  transition: opacity 0.15s, transform 0.1s;
+}
+.btn-secondary:hover { opacity: 0.88; transform: translateY(-1px); }
+
+/* ── ゴーストボタン（ベージュ）── */
+.btn-beige {
+  background: var(--beige);
+  color: var(--text);
+  border: 1px solid var(--beige-dark);
+  border-radius: 10px;
+  padding: 12px 24px;
+  font-size: var(--fs-base);
+  font-weight: 500;
+  cursor: pointer;
+  transition: opacity 0.15s, transform 0.1s;
+}
+.btn-beige:hover { opacity: 0.85; }
+
+/* ── AIグロー（水色）── */
 .ai-glow {
   box-shadow: 0 0 32px var(--ai-dim), 0 0 8px var(--ai-dim);
 }
 
-/* ── Animations ─────────────────────────────────────────── */
+/* ── きせきロゴ ── */
+.kiseki-logo {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-weight: 300;
+  color: var(--accent);
+  letter-spacing: -0.02em;
+}
+
+.kiseki-tagline {
+  font-size: var(--fs-xs);
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--green);
+  font-weight: 500;
+}
+
+/* ── ナビゲーションアイコン（水色アクセント）── */
+.nav-item-active {
+  color: var(--accent);
+  background: var(--accent-dim);
+  border-radius: 12px;
+}
+
+/* ── タスクカードカテゴリ色 ── */
+.category-class    { background: var(--accent-dim);  border-left: 3px solid var(--accent); }
+.category-work     { background: var(--green-dim);   border-left: 3px solid var(--green); }
+.category-play     { background: var(--beige-dim);   border-left: 3px solid var(--beige-dark); }
+.category-event    { background: rgba(121,200,214,0.12); border-left: 3px solid var(--accent-light); }
+.category-task     { background: var(--green-dim);   border-left: 3px solid var(--green); }
+.category-other    { background: var(--surface-raised); border-left: 3px solid var(--border-mid); }
+
+/* ── アニメーション ── */
 @keyframes pulse { 0%,100%{opacity:1} 50%{opacity:.45} }
 @keyframes spin { to{transform:rotate(360deg)} }
 @keyframes fadeUp {
@@ -161,5 +324,48 @@ button, a { transition-property: background-color, border-color, color, opacity,
   from{opacity:0;transform:scale(0.94)}
   to{opacity:1;transform:scale(1)}
 }
+/* きせき専用：水面の波紋 */
+@keyframes ripple {
+  0%{box-shadow:0 0 0 0 rgba(40,123,158,0.3)}
+  100%{box-shadow:0 0 0 12px rgba(40,123,158,0)}
+}
+
 .fade-up { animation: fadeUp 0.4s ease both; }
 .scale-in { animation: scaleIn 0.35s ease both; }
+.kiseki-ripple { animation: ripple 1.5s ease-out infinite; }
+
+/* ── ダークモード切り替えボタン ── */
+.theme-toggle {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 12px;
+  border-radius: 20px;
+  border: 1px solid var(--border-mid);
+  background: var(--surface-raised);
+  color: var(--text-muted);
+  font-size: var(--fs-sm);
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.theme-toggle:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+/* ── カラー配分クラス（白20/青30/緑30/ベージュ20）── */
+
+/* 白エリア（20%）→ 情報・余白 */
+.area-white { background: var(--surface); }
+
+/* 青エリア（30%）→ 操作・重要・ヘッダー */
+.area-blue  { background: var(--accent); color: #fff; }
+.area-blue-soft { background: var(--accent-dim); }
+
+/* 緑エリア（30%）→ 完了・成功・サブ機能 */
+.area-green { background: var(--green); color: #fff; }
+.area-green-soft { background: var(--green-dim); }
+
+/* ベージュエリア（20%）→ メモ・自然・補助 */
+.area-beige { background: var(--beige); }
+.area-beige-soft { background: var(--beige-dim); }
