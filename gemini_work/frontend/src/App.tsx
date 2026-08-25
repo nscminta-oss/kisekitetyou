@@ -785,8 +785,8 @@ function LoginScreen({ onLogin, onRegister, notice }: { onLogin: (u: User) => vo
       <div className="fade-up" style={{ width: '100%', maxWidth: 400 }}>
         {/* Brand */}
         <div style={{ textAlign: 'center', marginBottom: 40 }}>
-          <div style={{ fontFamily: 'var(--font-mono)', fontSize: 'var(--fs-2xs)', color: 'var(--accent)', letterSpacing: '0.18em', marginBottom: 8 }}>STUDENT AI SCHEDULER</div>
-          <div style={{ fontFamily: 'var(--font-display)', fontStyle: 'italic', fontSize: 'var(--fs-2xl)', fontWeight: 300, color: 'var(--text)', lineHeight: 1 }}>Planner</div>
+          <div style={{ fontFamily: 'var(--font-mono)', fontSize: 'var(--fs-2xs)', color: 'var(--accent)', letterSpacing: '0.18em', marginBottom: 8 }}>KISEKI</div>
+          <div style={{ fontFamily: 'var(--font-display)', fontStyle: 'italic', fontSize: 'var(--fs-2xl)', fontWeight: 300, color: 'var(--text)', lineHeight: 1 }}>きせきの手帳</div>
           <div style={{ fontFamily: 'var(--font-body)', fontSize: 'var(--fs-sm)', color: 'var(--text-dim)', marginTop: 8 }}>AIがあなたの限界を見極めます</div>
         </div>
 
@@ -864,7 +864,7 @@ function RegisterScreen({ onRegister, onBack }: { onRegister: (name: string, ema
         <div style={{ marginBottom: 32 }}>
           <button onClick={onBack} style={{ background: 'none', border: 'none', color: 'var(--text-muted)', cursor: 'pointer', fontSize: 'var(--fs-sm)', marginBottom: 16, display: 'flex', alignItems: 'center', gap: 6 }}>← 戻る</button>
           <div style={{ fontFamily: 'var(--font-display)', fontStyle: 'italic', fontSize: 'var(--fs-xl)', fontWeight: 300, color: 'var(--text)' }}>新規登録</div>
-          <div style={{ fontSize: 'var(--fs-sm)', color: 'var(--text-muted)', marginTop: 4 }}>登録後、AIがあなたの限界を査定します</div>
+          <div style={{ fontSize: 'var(--fs-sm)', color: 'var(--text-muted)', marginTop: 4 }}>きせきがあなたの限界を見極めます</div>
         </div>
         <div className="card">
           <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', gap: 16 }}>
@@ -1858,7 +1858,7 @@ function SettingsScreen({ settings, update, user, onLogout, onProfile }: {
 
       <SettingsSection title="表示">
         <SettingsRow label="テーマ" right={
-          <SegControl small value={settings.theme} onChange={v => update('theme', v)} options={[{ value: 'light' as Theme, label: '☀ ライト' }, { value: 'dark' as Theme, label: '🌙 ダーク' }, { value: 'system' as Theme, label: '自動' }]} />
+          <SegControl small value={settings.theme} onChange={v => update('theme', v)} options={[{ value: 'light' as Theme, label: '🌿 カラー' }, { value: 'dark' as Theme, label: '⬛ 黒白' }, { value: 'system' as Theme, label: '自動' }]} />
         } />
         <SettingsRow label="文字サイズ" right={
           <SegControl small value={settings.fontSize} onChange={v => update('fontSize', v)} options={[{ value: 'sm' as FontSize, label: '小' }, { value: 'md' as FontSize, label: '中' }, { value: 'lg' as FontSize, label: '大' }]} />
